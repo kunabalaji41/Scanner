@@ -1,12 +1,12 @@
-# Example Hello World WAR-File
-I saw [this](http://centerkey.com/jboss/) post and build an example war file from it to test a JBOSS(EAP 6.4) I setted up.
+# sparkjava-war-example
+Build war with maven and sparkjava framework
 
-The included war-file ist build with Java 1.8.0_111, but it ran without problems on a JDK7 JBOSS-EAP 6.4 server.
+Steps:
 
-## How to use?
-Download the [war-file](https://raw.githubusercontent.com/aeimer/java-example-helloworld-war/master/dist/helloworld.war) and copy it to the _[jboss-home]/standalone/deployments/_ folder. JBOSS will automatically delpoy the project.
-
-Now you can check if it has worked under http(s)://[your-jboss-adress-here]/helloworld/.
-
-## Tested on
-This file is only testet on JBOSS EAP 6.4 under Java 7 on CentOS 7.
+1. Download a fresh [Tomcat 8 distribution](https://tomcat.apache.org/download-80.cgi)
+2. Clone this repository to your local machine
+3. Run mvn package
+4. Copy the generated `sparkjava-hello-world-1.0.war` to the Tomcat `webapps` folder
+5. Start Tomcat by running `bin\startup.bat` (or `bin\startaup.sh` for Linux)
+5. Tomcat will automatically deploy the war
+6. Open [http://localhost:8080/sparkjava-hello-world-1.0/hello](http://localhost:8080/sparkjava-hello-world-1.0/hello) in your browser
